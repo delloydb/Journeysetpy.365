@@ -5,3 +5,18 @@
 # variable naming conventions: snake_case, camelCase, PascalCase
 # variable scope: local, global, nonlocal
 
+# Integer variable
+age = 25
+print("Age:", age)
+
+# Float variable
+height = 5.9
+print("Height:", height)
+
+# String variable
+name = "Alice"
+print("Name:", name)
+
+# Boolean variable
+is_student = True
+print("Is Student:", is_student)
