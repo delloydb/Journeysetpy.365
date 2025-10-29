@@ -9,3 +9,11 @@ print("Hello, " + user_name + "!")
 # Getting user's age
 user_age = input("Enter your age: ")
 print("You are " + user_age + " years old.")
+
+# Getting user's height
+user_height = input("Enter your height in feet: ")
+print("Your height is " + user_height + " feet.")
+
+# Getting user's favorite color
+favorite_color = input("Enter your favorite color: ")
+print("Your favorite color is " + favorite_color + ".")
