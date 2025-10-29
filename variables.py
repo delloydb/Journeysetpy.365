@@ -2,7 +2,7 @@
 # variable is a named location used to store data in memory.
 # This file contains various types of variables and their usage in Python.
 # variable types: integer, float, string, boolean, list, tuple, dictionary
-# variable naming conventions: snake_case, camelCase, PascalCase
+# variable naming conventions: snake_case, camelCase, PascalCase // small case with underscores, first letter lowercase with capital letters for new words, first letter of each word capitalized
 # variable scope: local, global, nonlocal
 
 # Integer variable
