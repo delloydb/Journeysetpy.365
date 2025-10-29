@@ -32,3 +32,32 @@ Each day comes with:
 ├── day200_cybersecurity_scripts/
 └── README.md
 
+Each folder contains:
+- `main.py` — The code for the day’s challenge  
+- `notes.md` — Explanations, insights, or reflections  
+
+---
+
+## 🧠 Tech Stack & Tools
+- **Python 3.x**
+- **VS Code / PyCharm**
+- **Git & GitHub**
+- **Jupyter Notebooks**
+- Libraries: `requests`, `pandas`, `numpy`, `matplotlib`, `scapy`, `beautifulsoup4`, `flask`, and others as needed.
+
+---
+
+## 💪 Progress Tracker
+| Day | Topic | Status |
+|-----|--------|--------|
+| 001 | Python Basics | ✅ |
+| 002 | Data Types | ✅ |
+| ... | ... | ⏳ |
+
+---
+
+## 🚀 How to Use
+. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/365-days-of-python.git
+
