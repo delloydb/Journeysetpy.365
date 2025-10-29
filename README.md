@@ -23,3 +23,12 @@ Each day comes with:
 ---
 
 ## 📂 Repository Structure
+📁 365-days-of-python/
+├── day01_intro_to_python/
+├── day02_data_types/
+├── day15_functions/
+├── day45_web_scraping/
+├── day120_data_analysis/
+├── day200_cybersecurity_scripts/
+└── README.md
+
