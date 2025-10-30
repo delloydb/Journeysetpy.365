@@ -40,3 +40,7 @@ print("Substring of '" + sample_string + "' from index 0 to 5 is: " + substring)
 # Accessing last character using negative indexing
 last_character = sample_string[-1]
 print("Last character of '" + sample_string + "' is: " + last_character)
+
+# formmating strings
+course = "python programming"
+print = course.replace("python", "Python").title()  # Replacing and title casing
