@@ -20,7 +20,3 @@ for fruit in fruits:
     print(fruit)
 # example 5: list methods
 print("Number of fruits in the list:", len(fruits))  # Length of the list
-fruits.sort()  # Sorting the list
-print("Sorted fruits list:", fruits)
-fruits.reverse()  # Reversing the list
-print("Reversed fruits list:", fruits)
