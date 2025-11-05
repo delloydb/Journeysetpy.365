@@ -8,7 +8,6 @@ print(customer)
 
 # accessing values in a dictionary
 print(customer["name"])
-print(customer.get("age"))
-print(
-    customer.get("address", "Address not found")
-)  # using get method with default value
+
+
+print(customer["age"])  # using get method with default value
