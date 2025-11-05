@@ -4,3 +4,11 @@
 # Dictionaries are written with curly brackets, and have keys and values
 
 customer = {"name": "John Doe", "age": 30, "is_verified": True}
+print(customer)
+
+# accessing values in a dictionary
+print(customer["name"])
+print(customer.get("age"))
+print(
+    customer.get("address", "Address not found")
+)  # using get method with default value
