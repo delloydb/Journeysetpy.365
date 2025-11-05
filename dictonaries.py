@@ -11,3 +11,13 @@ print(customer["name"])
 
 
 print(customer["age"])  # using get method with default value
+
+print(customer.get("birthday", 25))  # if key doesn't exist, return default value
+
+# adding a new key-value pair
+customer["email"] = " ghrgehrwj@gmail.com"
+print(customer)
+
+# updating an existing key-value pair
+customer["age"] = 31
+print(customer)
