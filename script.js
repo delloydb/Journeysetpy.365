@@ -1,68 +1,164 @@
-// Basic interactive bits: nav toggle, smooth scroll, contact form stub, reveal on scroll
-document.addEventListener('DOMContentLoaded', ()=> {
-  // sticky nav active link switching on scroll
-  const links = Array.from(document.querySelectorAll('.nav-link'));
-  const sections = links.map(l => document.querySelector(l.getAttribute('href')));
-  const headerOffset = 80;
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-  function onScroll(){
-    const y = window.scrollY;
-    sections.forEach((sec, i) => {
-      if(!sec) return;
-      const top = sec.offsetTop - headerOffset;
-      const bottom = top + sec.offsetHeight;
-      if (y >= top && y < bottom) {
-        links.forEach(ln => ln.classList.remove('active'));
-        links[i].classList.add('active');
-      }
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
     });
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
+});
 
-  // smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if(target){
-        e.preventDefault();
-        target.scrollIntoView({behavior:'smooth', block:'start'});
-        // close mobile nav if open
-        if(document.getElementById('nav').classList.contains('open')){
-          document.getElementById('nav').classList.remove('open');
+// Scroll animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
         }
-      }
     });
-  });
+}, observerOptions);
 
-  // mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  navToggle?.addEventListener('click', () => {
-    document.getElementById('nav').classList.toggle('open');
-  });
-
-  // reveal on scroll (very small)
-  const revealElements = document.querySelectorAll('.section, .project-card, .skill-card');
-  const obs = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting) e.target.classList.add('reveal');
+// Observe elements for scroll animations
+document.addEventListener('DOMContentLoaded', () => {
+    // Add fade-in class to elements
+    const sections = document.querySelectorAll('section');
+    const cards = document.querySelectorAll('.stat-card, .skill-card, .project-card, .testimonial-card');
+    
+    sections.forEach(section => {
+        section.classList.add('fade-in');
     });
-  }, {threshold: 0.12});
-  revealElements.forEach(el => obs.observe(el));
+    
+    cards.forEach(card => {
+        card.classList.add('fade-in');
+    });
+    
+    // Observe elements
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
+});
 
-  // contact form (stub)
-  const form = document.getElementById('contactForm');
-  form?.addEventListener('submit', (e) => {
+// Navbar background on scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+        navbar.style.backdropFilter = 'blur(10px)';
+    } else {
+        navbar.style.background = 'rgba(10, 10, 10, 0.9)';
+        navbar.style.backdropFilter = 'blur(10px)';
+    }
+});
+
+// Contact form handling
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const data = new FormData(form);
-    const payload = Object.fromEntries(data.entries());
-    // For now: show a friendly confirmation and clear
-    alert('Message sent — thank you, Sheriff will respond soon.');
-    form.reset();
-    console.log('Contact payload:', payload);
-  });
+    
+    // Get form data
+    const formData = new FormData(contactForm);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
+    
+    // Simple validation
+    if (!name || !email || !message) {
+        showAlert('Please fill in all fields.', 'error');
+        return;
+    }
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        showAlert('Please enter a valid email address.', 'error');
+        return;
+    }
+    
+    // Simulate form submission
+    showAlert('Thank you for your message! I\'ll get back to you soon.', 'success');
+    
+    // Reset form
+    contactForm.reset();
+});
 
-  // footer year
-  const yearEl = document.getElementById('year');
-  if(yearEl) yearEl.textContent = new Date().getFullYear();
+// Show alert message
+function showAlert(message, type) {
+    // Remove existing alerts
+    const existingAlert = document.querySelector('.alert');
+    if (existingAlert) {
+        existingAlert.remove();
+    }
+    
+    // Create alert element
+    const alert = document.createElement('div');
+    alert.className = `alert alert-${type}`;
+    alert.textContent = message;
+    
+    // Style the alert
+    alert.style.position = 'fixed';
+    alert.style.top = '20px';
+    alert.style.right = '20px';
+    alert.style.padding = '15px 20px';
+    alert.style.borderRadius = '5px';
+    alert.style.zIndex = '10000';
+    alert.style.fontWeight = '500';
+    alert.style.maxWidth = '300px';
+    alert.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3)';
+    
+    if (type === 'success') {
+        alert.style.background = 'var(--primary)';
+        alert.style.color = 'var(--dark-bg)';
+    } else {
+        alert.style.background = '#ff4757';
+        alert.style.color = 'white';
+    }
+    
+    // Add to page
+    document.body.appendChild(alert);
+    
+    // Remove after 5 seconds
+    setTimeout(() => {
+        alert.remove();
+    }, 5000);
+}
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            const offsetTop = targetElement.offsetTop - 80;
+            
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Add current year to footer
+document.addEventListener('DOMContentLoaded', () => {
+    const yearElement = document.querySelector('.footer-copyright p');
+    if (yearElement) {
+        const currentYear = new Date().getFullYear();
+        yearElement.textContent = yearElement.textContent.replace('2023', currentYear);
+    }
 });
