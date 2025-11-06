@@ -9,7 +9,7 @@ class Dog:
 
     def __init__(self, name, age):
         """Initialize name and age attributes."""
-        self.name = name
+        self.name = name  # constructor
         self.age = age
 
     def sit(self):
@@ -25,6 +25,6 @@ class Dog:
 my_dog = Dog("Buddy", 3)
 print(f"My dog's name is {my_dog.name}.")
 print(f"My dog is {my_dog.age} years old.")
-
+# Call methods on the my_dog object
 my_dog.sit()
 my_dog.roll_over()
