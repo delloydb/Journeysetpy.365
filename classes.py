@@ -2,6 +2,8 @@
 # A class is a blueprint for creating objects. It defines a set of attributes and methods that
 # the created objects will have.
 # An object is an instance of a class. It is created using the class blueprint and can have its own unique attributes and behaviors.
+# Constructors are special methods in a class that are automatically called when an object of the class is created.
+# They are typically used to initialize the attributes of the object.
 
 
 class Dog:
