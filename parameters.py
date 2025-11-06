@@ -7,6 +7,7 @@ def greet_user(username):
 
     print(f"Hello, {username}!")
 
-    greet_user("Allan")
-    greet_user("Maria")
-    greet_user("John")
+
+greet_user("Allan")
+greet_user("Maria")
+greet_user("John")
