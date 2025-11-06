@@ -8,3 +8,20 @@
 class Animal:
     def speak(self):
         return "Animal speaks"
+
+
+# Derived class
+class Dog(Animal):
+    def bark(self):
+        print("Woof!")
+
+
+# Another derived class
+class Cat(Animal):
+    def meow(self):
+        print("Meow!")
+
+
+# Creating objects of the derived classes
+dog = Dog()
+cat = Cat()
