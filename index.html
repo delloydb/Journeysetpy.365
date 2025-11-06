@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sheriff • Software Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Sheriff — Computer Science student & software developer. Frontend, backend, apps, and clean reliable code. Available for freelance and internships.">
+</head>
+<body class="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-mark">◧◧</div>
+        <div class="brand-text">SHERIFF</div>
+      </div>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta-wrap">
+        <a class="btn-primary" href="#contact">Let's Talk</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Hi, I’m <span class="accent">Sheriff</span> — I build software people actually use.</h1>
+          <p class="lead">Computer Science student focused on software engineering. Frontend, backend, and clean systems design. Available for internships & freelance.</p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn-primary">Let’s Talk</a>
+            <a href="#projects" class="btn-secondary">View Projects</a>
+          </div>
+          <div class="meta-chips">
+            <span class="chip">📦 12 projects</span>
+            <span class="chip">💻 Python • JS • Java</span>
+            <span class="chip">🚀 Open-source contributor</span>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap" role="img" aria-label="Portrait of Sheriff">
+          <img src="images/hero.jpg" alt="Sheriff portrait" class="hero-image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST / STATS -->
+    <section class="stats section" aria-hidden="false">
+      <div class="container stats-grid">
+        <div class="stat">
+          <div class="stat-value">12+</div>
+          <div class="stat-label">Projects shipped</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">3</div>
+          <div class="stat-label">Internships</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">1000+</div>
+          <div class="stat-label">GitHub commits</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about section">
+      <div class="container about-grid">
+        <div>
+          <h2>About</h2>
+          <p>I’m a Computer Science student with a strong focus on software development. I enjoy building reliable systems, shipping polished UI, and learning new tools that make teams more productive.</p>
+          <p>I specialize in full-stack web apps using JavaScript/TypeScript (React, Node), Python, and cloud deployments. I also mentor junior devs and contribute to open-source projects.</p>
+          <a class="btn-outline" href="#projects">See my work</a>
+        </div>
+
+        <div class="about-list">
+          <ul>
+            <li><strong>Primary:</strong> JavaScript, React, Node.js, Python</li>
+            <li><strong>Other:</strong> Docker, PostgreSQL, AWS, CI/CD</li>
+            <li><strong>Tools:</strong> Git, VS Code, Jest, Playwright</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skill-grid">
+          <div class="skill-card">
+            <h3>Frontend</h3>
+            <p>React, TypeScript, HTML/CSS, Accessibility</p>
+          </div>
+          <div class="skill-card">
+            <h3>Backend</h3>
+            <p>Node.js, Express, Python, REST & GraphQL</p>
+          </div>
+          <div class="skill-card">
+            <h3>Data & DevOps</h3>
+            <p>Postgres, Docker, CI/CD pipelines, AWS basics</p>
+          </div>
+          <div class="skill-card">
+            <h3>Testing</h3>
+            <p>Unit, integration, E2E testing — Jest & Playwright</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+          <!-- Project card (repeatable) -->
+          <article class="project-card">
+            <div class="project-media">[screenshot]</div>
+            <div class="project-body">
+              <h3>Project Alpha</h3>
+              <p>Full-stack app that automates X and saves Y hours weekly. Built with React, Node, Postgres.</p>
+              <div class="project-tags">
+                <span>React</span><span>Node</span><span>Postgres</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="link">Case study</a>
+                <a href="#" class="link">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">[screenshot]</div>
+            <div class="project-body">
+              <h3>Mobile App Beta</h3>
+              <p>Cross-platform mobile MVP for Y. Implemented offline sync and push notifications.</p>
+              <div class="project-tags">
+                <span>Flutter</span><span>Firebase</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="link">Case study</a>
+                <a href="#" class="link">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">[screenshot]</div>
+            <div class="project-body">
+              <h3>Open-source Tool</h3>
+              <p>CLI/Library used by other devs to simplify deployment workflows.</p>
+              <div class="project-tags">
+                <span>Python</span><span>CLI</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="link">Case study</a>
+                <a href="#" class="link">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="experience section">
+      <div class="container">
+        <h2>Experience & Education</h2>
+        <ol class="timeline">
+          <li>
+            <strong>Intern — Acme Tech</strong>
+            <span class="muted">June 2024 — Aug 2024</span>
+            <p>Worked on internal tools and backend APIs. Improved latency by 30% on core endpoints.</p>
+          </li>
+          <li>
+            <strong>BSc Computer Science</strong>
+            <span class="muted">University — Expected 2026</span>
+            <p>Relevant coursework: Data Structures, Algorithms, Software Engineering, Databases.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials section">
+      <div class="container">
+        <h2>Testimonials</h2>
+        <div class="test-grid">
+          <blockquote>
+            <p>“Sheriff wrote production-ready code quickly and always asked the right questions. Strong problem-solving.”</p>
+            <cite>— Prof. Jane Doe, University</cite>
+          </blockquote>
+
+          <blockquote>
+            <p>“Reliable, communicative, and shipped features with great attention to detail.”</p>
+            <cite>— Dev Lead, Acme Tech</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner section">
+      <div class="container">
+        <h2>Ready to build something together?</h2>
+        <a class="btn-primary" href="#contact">Let’s Talk</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact section">
+      <div class="container contact-grid">
+        <div>
+          <h2>Contact</h2>
+          <p>Available for internships, freelance, and collaboration. Send a quick message.</p>
+
+          <form id="contactForm" class="contact-form" novalidate>
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Send message</button>
+              <a class="btn-outline" href="mailto:hello@example.com">Email directly</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="contact-side">
+          <h3>Quick Links</h3>
+          <ul class="socials">
+            <li><a href="#" aria-label="GitHub">GitHub</a></li>
+            <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+            <li><a href="#" aria-label="Resume">Download CV</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Sheriff — Built with care</div>
+      <nav class="footer-nav">
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
