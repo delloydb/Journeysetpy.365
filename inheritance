@@ -12,14 +12,12 @@ class Animal:
 
 # Derived class
 class Dog(Animal):
-    def bark(self):
-        print("Woof!")
+    print("Woof!")
 
 
 # Another derived class
 class Cat(Animal):
-    def meow(self):
-        print("Meow!")
+    print("Meow!")
 
 
 # Creating objects of the derived classes
