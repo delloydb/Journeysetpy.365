@@ -1,0 +1,10 @@
+# learning inheritance in python
+# inheritance is a way to form new classes using classes that have already been defined.
+# The newly formed classes are called derived classes, the classes that we derive from are called base classes.
+# When we derive a class from another class, the derived class inherits all the features from the base class and can have additional features of its own.
+# Example of inheritance in Python
+
+# Base class
+class Animal:
+    def speak(self):
+        return "Animal speaks"
