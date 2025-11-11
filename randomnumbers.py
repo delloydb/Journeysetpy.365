@@ -31,3 +31,17 @@ if __name__ == "__main__":
 members = ["Alice", "Bob", "Charlie", "Diana"]
 leader = select_random_leader(members)
 print(f"The selected team leader is: {leader}")
+
+
+# rolling a dice simulation
+def roll_dice():
+    """Simulate rolling a six-sided dice."""
+    return random.randint(1, 6)
+
+
+# Example usage
+if __name__ == "__main__":
+    dice_result = roll_dice()
+    print(f"You rolled a {dice_result}")
+dice_result = roll_dice()
+print(f"You rolled a {dice_result}")
