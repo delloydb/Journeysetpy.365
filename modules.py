@@ -5,3 +5,7 @@
 # We can define our most used functions in a module and import it, instead of copying their definitions into different programs.
 # Example of a module in Python
 
+import converters
+
+print(converters.lbs_to_kg(150))  # Convert 150 pounds to kilograms
+# this file is a converter functions file to be used in other modules
