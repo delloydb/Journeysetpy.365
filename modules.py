@@ -7,5 +7,13 @@
 
 import converters
 
+
 print(converters.lbs_to_kg(150))  # Convert 150 pounds to kilograms
 # this file is a converter functions file to be used in other modules
+
+numbers = [1, 2, 3, 4, 5]
+
+print(converters.find_max(numbers))  # Output: 5
+print(converters.find_min(numbers))  # Output: 1
+print(converters.calculate_average(numbers))  # Output: 3.0
+print(converters.calculate_sum(numbers))  # Output: 15
