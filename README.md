@@ -50,10 +50,10 @@ Each folder contains:
 ## 💪 Progress Tracker
 | Day | Topic | Status |
 |-----|--------|--------|
-| 001 | Python Basics | ✅ |
-| 002 | Data Types | ✅ |
-| 003 | Variables | ⏳ |
-| 003 | Input | ⏳ |
+| 001 | Python Basics |  |
+| 002 | Data Types |  |
+| 003 | Variables |  |
+| 003 | Input |  |
 | 003 | Type Conversion | ⏳ |
 | 003 | Strings | ⏳ |
 | 003 | formatted Strings | ⏳ |
